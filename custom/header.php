@@ -25,6 +25,7 @@
 <!-- CSS Zone -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" >
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css" >
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slick.css" >
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css" >
 
 <!-- CDN Fonts -->
@@ -42,13 +43,13 @@
 	<header class="site-header">
 		<div class="wrapper">
 			<div class="site-branding" onclick="document.location.href='<?php echo esc_url( home_url( '/' ) ); ?>'">
-				<img src="http://placehold.it/100x100">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?> / <?php bloginfo( 'description' ); ?></h1>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-small-color.png" class="logo-header">
+				<h1 class="site-title"><?php bloginfo( 'description' ); ?></h1>
 			</div>
 			<nav class="site-navigation">
-				<a href="#" class="site-navigation__entry">Tarifs & prestations</a>
-				<a href="#" class="site-navigation__entry">Partenaires</a>
-				<a href="#" class="site-navigation__entry">Blog</a>
+				<a href="<?php echo get_permalink(6); ?>" class="site-navigation__entry <?php if ( is_page( 6 ) ) { echo 'active'; } ?>"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Tarifs & prestations</a>
+				<a href="<?php echo get_permalink(8); ?>" class="site-navigation__entry <?php if ( is_page( 8 ) ) { echo 'active'; } ?>"><i class="fa fa-comments" aria-hidden="true"></i> Blog</a>
+				<a href="<?php echo get_permalink(10); ?>" class="site-navigation__entry <?php if ( is_page( 10 ) ) { echo 'active'; } ?>"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
 			</nav>
 		</div>
 	</header>

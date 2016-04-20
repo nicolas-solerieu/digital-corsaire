@@ -9,20 +9,20 @@ function create_post_type() {
 
 /* --- WORKS ----*/
 register_post_type(
-    'work',   
+    'partner',   
     array(
-        'label' => 'Works',
+        'label' => 'Partners',
         'labels' => array(
-            'name' => 'Works',
-            'singular_name' => 'Work',
-            'all_items' => 'All works',
-            'add_new_item' => 'Add a new work',
-            'edit_item' => 'Edit work',
-            'new_item' => 'New work',
-            'view_item' => 'See work',
-            'search_items' => 'Search works',
-            'not_found' => 'No work found',
-            'not_found_in_trash'=> 'No works found in trash'
+            'name' => 'Partners',
+            'singular_name' => 'Partner',
+            'all_items' => 'All partners',
+            'add_new_item' => 'Add a new partner',
+            'edit_item' => 'Edit partner',
+            'new_item' => 'New partner',
+            'view_item' => 'See partner',
+            'search_items' => 'Search partners',
+            'not_found' => 'No partner found',
+            'not_found_in_trash'=> 'No partners found in trash'
         ),
     'public' => true,
     'capability_type' => 'post',
