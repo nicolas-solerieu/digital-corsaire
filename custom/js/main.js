@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 });
 
+window.sr = ScrollReveal().reveal('.reveal-anim');
 
 // --------------------------------------------------------- //
 // FUNCTION NAME

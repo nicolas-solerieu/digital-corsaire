@@ -1,10 +1,11 @@
+body.login {
+	background: #333333;
+}
 #login h1 a { 
     background-image: url("../images/logo-login.png");
-    background-size: 50px 50px;
+    background-size: 100px auto;
     background-position: center;
-    border: 4px solid #d2d2d2;
     height: 100px;
     width: 100px;
-    border-radius: 50%;
     display: inline-block;
 }
