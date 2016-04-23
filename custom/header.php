@@ -38,6 +38,8 @@
 
 <body <?php body_class(); ?>>
 
+<div id="loading"><img src="<?php echo get_template_directory_uri(); ?>/img/loading-logo.jpg" class="loader"></div>
+
 <div id="page">
 
 	<header class="site-header">

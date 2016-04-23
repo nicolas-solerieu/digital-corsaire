@@ -36,6 +36,34 @@ register_post_type(
     )
 );
 
+/* --- RESULTS ----*/
+register_post_type(
+    'result',   
+    array(
+        'label' => 'Results',
+        'labels' => array(
+            'name' => 'Results',
+            'singular_name' => 'Result',
+            'all_items' => 'All results',
+            'add_new_item' => 'Add a new result',
+            'edit_item' => 'Edit result',
+            'new_item' => 'New result',
+            'view_item' => 'See result',
+            'search_items' => 'Search results',
+            'not_found' => 'No result found',
+            'not_found_in_trash'=> 'No results found in trash'
+        ),
+    'public' => true,
+    'capability_type' => 'post',
+    'supports' => array(
+        'title',
+        'excerpt',
+        'editor'
+    ),
+    'has_archive' => false
+    )
+);
+
 }
 
 ?>

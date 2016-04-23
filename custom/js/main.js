@@ -3,16 +3,51 @@
 // --------------------------------------------------------- //
 $(document).ready(function() {
 
-  $('.reference-slider').slick({
+  $('.partners-slider').slick({
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 2000,
     arrows: false,
-    dots: true
+    dots: true,
+    infinite: true,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
   });
 
 });
 
-window.sr = ScrollReveal().reveal('.reveal-anim');
+// --------------------------------------------------------- //
+// DOCUMENT READY
+// --------------------------------------------------------- //
+$(window).load(function() {
+
+	$('#loading').fadeOut();
+
+});
 
 // --------------------------------------------------------- //
 // FUNCTION NAME

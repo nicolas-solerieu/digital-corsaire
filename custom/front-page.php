@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<section class="hero-homepage">
 		<div class="wrapper">
-			<div class="hero-container reveal-anim">
+			<div class="hero-container">
 				<h2>Gagnez de véritables prospects de manière automatique</h2>
 				<p>Les experts de Digital Corsaire améliorent votre présence web et favorisent la transformation de contacts en clients.</p>
 				<a href="#" class="hero-cta">Découvrez nos prestation <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
@@ -26,8 +26,8 @@ get_header(); ?>
 
 	<section class="pres-homepage">
 		<div class="wrapper">
-			<h3 class="section-title reveal-anim">Notre offre</h3>
-			<p class="section-desc reveal-anim">A partir de votre existant, nos experts corrigent un ensemble de moyens sur le web afin de vous faire gagner des clients automatiquement.</p>
+			<h3 class="section-title">Notre offre</h3>
+			<p class="section-desc">A partir de votre existant, nos experts corrigent un ensemble de moyens sur le web afin de vous faire gagner des clients automatiquement.</p>
 			<div class="assets-list">
 				<div class="one-asset">
 					<i class="fa fa-bookmark-o" aria-hidden="true"></i>
@@ -48,23 +48,65 @@ get_header(); ?>
 					<p>A partir ce ce taux de conversion et du coût de revient de votre produit, nous décidons de quels moyens extérieurs à votre site sont suffisamment rentables à mettre en place pour vous faire gagner des prospects.</p>
 				</div>
 			</div>
-			<p class="call reveal-anim">Laissez vos concurrents loin derrière vous</p>
-			<a href="#" class="cta-call reveal-anim">Consultez le détail de nos prestations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+			<p class="call">Laissez vos concurrents loin derrière vous</p>
+			<a href="<?php echo get_permalink(10); ?>" class="cta-call">Consultez le détail de nos prestations <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 		</div>
 	</section>
 
 	<section class="ref-homepage">
 		<div class="wrapper">
-			<h3 class="section-title reveal-anim">Chaque <span>€uro</span> investi rapporte</h3>
-			<p class="section-desc reveal-anim">Notre agence opérationnelle en Inbound Marketing et Growth-Hacking travaille pour vous faire gagner des clients supplémentaires.</p>
-			<div class="reference-slider-area">
-				<i class="fa fa-pie-chart icon-ref reveal-anim" aria-hidden="true"></i>
-				<p class="intro-ref-slider reveal-anim">Exemple de client ayant accepté de montrer nos résultats</p>
-				<div class="reference-slider">
-					<img src="http://placehold.it/960x400">
-					<img src="http://placehold.it/960x400">
-					<img src="http://placehold.it/960x400">
-					<img src="http://placehold.it/960x400">
+			<h3 class="section-title">Chaque <span>€uro</span> investi rapporte</h3>
+			<p class="section-desc">Notre agence opérationnelle en Inbound Marketing et Growth-Hacking travaille pour vous faire gagner des clients supplémentaires.</p>
+			
+			<div class="ref-list">
+
+				<?php
+				$args = array( 'post_type' => 'result', 'order' => 'DESC', 'posts_per_page' => 999); 
+				$loop = new WP_Query( $args );
+				?>
+
+				<?php if($loop->post_count != 0) { ?>
+
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+					<div class="one-ref">
+						<span class="date"><?php the_time('j M Y'); ?></span>
+					 	<span class="proof"><?php echo get_the_content(); ?> pour </span><span class="title"><a href="http://<?php the_title(); ?>"><?php the_title(); ?></a></span>
+					</div>
+
+			 	<?php endwhile; ?>
+
+				<?php } else { echo "<p>Rien à afficher</p>"; }?>
+
+				<?php wp_reset_query(); ?>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="partners">
+		<div class="wrapper">
+			<div class="partners-slider-area">
+				<p class="intro-partners-slider">Nos partenaires</p>
+				<div class="partners-slider">
+					<?php
+					$args = array( 'post_type' => 'partner', 'order' => 'DESC', 'posts_per_page' => 999); 
+					$loop = new WP_Query( $args );
+					?>
+
+					<?php if($loop->post_count != 0) { ?>
+
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+						<div class="one-partner" onclick="document.location.href='<?php echo get_the_excerpt(); ?>'">
+							<?php the_post_thumbnail('full'); ?>
+						</div>
+
+				 	<?php endwhile; ?>
+
+					<?php } else { echo "<p>Rien à afficher</p>"; }?>
+
+					<?php wp_reset_query(); ?>
 				</div>
 			</div>
 		</div>

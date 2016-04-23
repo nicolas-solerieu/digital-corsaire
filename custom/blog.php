@@ -44,7 +44,7 @@ get_header(); ?>
 						</div>
 						<div class="one-article__details">
 							<div class="one-article__details__title" >
-								<p><?php the_date('j F Y'); ?></p>
+								<p><?php the_time('j F Y'); ?></p>
 								<h3><?php the_title(); ?></h3>
 							</div>
 
