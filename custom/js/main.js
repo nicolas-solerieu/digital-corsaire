@@ -52,6 +52,17 @@ $(window).load(function() {
 // --------------------------------------------------------- //
 // FUNCTION NAME
 // --------------------------------------------------------- //
-$('.event-class').click(function(){
+$('.box-dialog__head').click(function(){
+  $('.box-dialog__head i').toggleClass('rotate');
+  $('.box-dialog__content').slideToggle(300);
+});
 
+// --------------------------------------------------------- //
+// MENU
+// --------------------------------------------------------- //
+$('.resp-menu-bt').click(function(){
+  $('.site-navigation').fadeIn(300);
+});
+$('.close-resp-menu-bt').click(function(){
+  $('.site-navigation').fadeOut(300);
 });

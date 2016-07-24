@@ -31,16 +31,16 @@
 				</div>
 				<div class="footer-col social">
 					<p class="footer-col__title">Nous suivre</p>
-					<a href="#" class="footer-social-link fb"><i class="fa fa-facebook"></i><span>Facebook</span></a>
-					<a href="#" class="footer-social-link tw"><i class="fa fa-twitter"></i><span>Twitter</span></a>
-					<a href="#" class="footer-social-link gg"><i class="fa fa-google"></i><span>Google+</span></a>
+					<a href="https://www.facebook.com/digitalcorsaire" target="_blank" class="footer-social-link fb"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+					<a href="https://twitter.com/digitalcorsaire" target="_blank" class="footer-social-link tw"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+					<a href="https://plus.google.com/106104561089738871096/about" target="_blank" class="footer-social-link gg"><i class="fa fa-google"></i><span>Google+</span></a>
 				</div>
 			</div>
 		</div>
 		<div class="footer-bottom">
 			<div class="wrapper">
-				<p class="copy">Copyright © 2016 Digital Corsaire. All Rights Reserved</p>
-				<p class="fun">Propulsé par <a href="">Defineed</a> / Made in Breizh</p>
+				<p class="copy">Copyright &copy; 2016 Digital Corsaire &mdash; un projet de <a href="https://twitter.com/Curation2web" target="_blank">@curation2web</a> et <a href="https://twitter.com/wikibreizh" target="_blank">@wkibreizh</a> par <a href="https://twitter.com/defineed_fr" target="_blank">@defineed_fr</a></p>
+				<p class="fun">Design & dev : <a href="http://slrncl.com" target="_blank">SLRNCL</a> / Made in Breizh</p>
 			</div>
 		</div>
 	</footer>

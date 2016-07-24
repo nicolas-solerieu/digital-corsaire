@@ -17,9 +17,9 @@ get_header(); ?>
 	<section class="hero-homepage">
 		<div class="wrapper">
 			<div class="hero-container">
-				<h2>Gagnez de véritables prospects de manière automatique</h2>
-				<p>Les experts de Digital Corsaire améliorent votre présence web et favorisent la transformation de contacts en clients.</p>
-				<a href="#" class="hero-cta">Découvrez nos prestation <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				<h2><?php $headline = get_option( 'headline', false ); echo $headline;  ?></h2>
+				<p><?php $headline_text = get_option( 'headline_text', false ); echo $headline_text;  ?></p>
+				<a href="<?php echo get_permalink(6); ?>" class="hero-cta">Découvrez nos prestation <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</section>
